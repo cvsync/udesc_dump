@@ -1,0 +1,826 @@
+$Id: hiddefs,v 1.2 2002/12/03 16:10:22 maekawa Exp $
+itemtype	MAIN	0
+itemtype	GLOBAL	1
+itemtype	LOCAL	2
+
+/* Main items */
+item	MAIN INPUT		8	Input
+item	MAIN OUTPUT		9	Output
+item	MAIN COLLECTION		10	Collection
+item	MAIN FEATURE		11	Feature
+item	MAIN ENDCOLLECTION	12	End Collection
+
+collection	PHYSICAL	0	Physical
+collection	APPLICATION	1	Application
+collection	LOGICAL		2	Logical
+collection	VENDOR_START	0x80
+collection	VENDOR_END	0xff
+
+/* Global items */
+item	GLOBAL USAGE_PAGE	0	Usage Page
+item	GLOBAL LOGICAL_MIN	1	Logical Minimum
+item	GLOBAL LOGICAL_MAX	2	Logical Maximum
+item	GLOBAL PHYSICAL_MIN	3	Physical Minimum
+item	GLOBAL PHYSICAL_MAX	4	Physical Maximum
+item	GLOBAL UNIT_EXPONENT	5	Unit Exponent
+item	GLOBAL UNIT		6	Unit
+item	GLOBAL REPORT_SIZE	7	Report Size
+item	GLOBAL REPORT_ID	8	Report ID
+item	GLOBAL REPORT_COUNT	9	Report Count
+item	GLOBAL PUSH		10	Push
+item	GLOBAL POP		11	Pop
+
+/* Local items */
+item	LOCAL USAGE		0	Usage
+item	LOCAL USAGE_MIN		1	Usage Minimum
+item	LOCAL USAGE_MAX		2	Usage Maximum
+item	LOCAL DESIGNATOR_INDEX	3	Designator Index
+item	LOCAL DESIGNATOR_MIN	4	Designator Minimum
+item	LOCAL DESIGNATOR_MAX	5	Designator Maximum
+item	LOCAL STRING_INDEX	6	String Index
+item	LOCAL STRING_MIN	7	String Minimum
+item	LOCAL STRING_MAX	8	String Maximum
+item	LOCAL DELIMITER		9	Delimiter
+ 
+/* Usage Pages */
+usagepage UNDEFINED		0x0000	Undefined
+usagepage GENERICDESKTOP	0x0001	Generic Desktop Controls
+usagepage SIMULATION		0x0002	Simulation Controls
+usagepage VR			0x0003	VR Controls
+usagepage SPORTS		0x0004	Sports Controls
+usagepage GAME			0x0005	Game Controls
+usagepage KEYBOARD		0x0007	Keyboard/Keypad
+usagepage LED			0x0008	LEDs
+usagepage BUTTON		0x0009	Button
+usagepage ORDINAL		0x000a	Ordinal
+usagepage TELEPHONY		0x000b	Telephony
+usagepage CONSUMER		0x000c	Consumer
+usagepage DIGITIZER		0x000d	Digitizer
+usagepage PID			0x000e	PID Page
+usagepage UNICODE		0x0010	Unicode
+usagepage ALPHANUMERIC		0x0014	Alphanumeric Display
+usagepage MONITOR1		0x0080	Monitor pages
+usagepage MONITOR2		0x0081	Monitor pages
+usagepage MONITOR3		0x0082	Monitor pages
+usagepage MONITOR4		0x0083	Monitor pages
+usagepage POWER1		0x0084	Power pages
+usagepage POWER2		0x0085	Power pages
+usagepage POWER3		0x0086	Power pages
+usagepage POWER4		0x0087	Power pages
+usagepage BARCODE		0x008c	Bar Code Scanner page
+usagepage WEIGHING		0x008d	Weighing Devices page
+usagepage CAMERA		0x0090	Camera Control Page
+usagepage ARCADE		0x0091	Arcade Page
+usagepage VENDOR_START		0xff00
+usagepage VENDOR_END		0xffff
+
+/* Usage Types */
+usagetype NONE NONE			NONE	None
+usagetype CONTROL LINEAR		LC	Linear Control
+usagetype CONTROL ON_OFF		OOC	On/Off Control
+usagetype CONTROL MOMENTARY		MC	Momentary Control
+usagetype CONTROL ONE_SHOT		OSC	One Shot Control
+usagetype CONTROL RE_TRIGGER		RTC	Re-Trigger Control
+usagetype DATA SELECTOR			Sel	Selector
+usagetype DATA STATIC_VALUE		SV	Static Value
+usagetype DATA STATIC_FLAG		SF	Static Flag
+usagetype DATA DYNAMIC_FLAG		DF	Dynamic Flag
+usagetype DATA DYNAMIC_VALUE		DV	Dynamic Value
+usagetype COLLECTION NAMED_ARRAY	NAry	Named Array
+usagetype COLLECTION APPLICATION	CA	Collection Application
+usagetype COLLECTION LOGICAL		CL	Collection Logical
+usagetype COLLECTION PHYSICAL		CP	Collection Physical
+usagetype COLLECTION USAGE_SWITCH	US	Usage Switch
+usagetype COLLECTION USAGE_MODIFIER	UM	Usage Modifier
+
+usage GENERICDESKTOP	NONE	0x0000 Undefined
+usage GENERICDESKTOP	CP	0x0001 Pointer
+usage GENERICDESKTOP	CA	0x0002 Mouse
+usage GENERICDESKTOP	CA	0x0004 Joystick
+usage GENERICDESKTOP	CA	0x0005 Game Pad
+usage GENERICDESKTOP	CA	0x0006 Keyboard
+usage GENERICDESKTOP	CA	0x0007 Keypad
+usage GENERICDESKTOP	CA	0x0008 Multi-axis Controller
+usage GENERICDESKTOP	DV	0x0030 X
+usage GENERICDESKTOP	DV	0x0031 Y
+usage GENERICDESKTOP	DV	0x0032 Z
+usage GENERICDESKTOP	DV	0x0033 Rx
+usage GENERICDESKTOP	DV	0x0034 Ry
+usage GENERICDESKTOP	DV	0x0035 Rz
+usage GENERICDESKTOP	DV	0x0036 Slider
+usage GENERICDESKTOP	DV	0x0037 Dial
+usage GENERICDESKTOP	DV	0x0038 Wheel
+usage GENERICDESKTOP	DV	0x0039 Hat Switch
+usage GENERICDESKTOP	CL	0x003a Counted Buffer
+usage GENERICDESKTOP	DV	0x003b Byte Count
+usage GENERICDESKTOP	OSC	0x003c Motion Wakeup
+usage GENERICDESKTOP	OOC	0x003d Start
+usage GENERICDESKTOP	OOC	0x003e Select
+usage GENERICDESKTOP	DV	0x0040 Vx
+usage GENERICDESKTOP	DV	0x0041 Vy
+usage GENERICDESKTOP	DV	0x0042 Vz
+usage GENERICDESKTOP	DV	0x0043 Vbrx
+usage GENERICDESKTOP	DV	0x0044 Vbry
+usage GENERICDESKTOP	DV	0x0045 Vbrz
+usage GENERICDESKTOP	DV	0x0046 Vno
+usage GENERICDESKTOP	CA	0x0080 System Control
+usage GENERICDESKTOP	OSC	0x0081 System Power Down
+usage GENERICDESKTOP	OSC	0x0082 System Sleep
+usage GENERICDESKTOP	OSC	0x0083 System Wake Up
+usage GENERICDESKTOP	OSC	0x0084 System Context Menu
+usage GENERICDESKTOP	OSC	0x0085 System Main Menu
+usage GENERICDESKTOP	OSC	0x0086 System App Menu
+usage GENERICDESKTOP	OSC	0x0087 System Menu Help
+usage GENERICDESKTOP	OSC	0x0088 System Menu Exit
+usage GENERICDESKTOP	OSC	0x0089 System Menu Select
+usage GENERICDESKTOP	RTC	0x008a System Menu Right
+usage GENERICDESKTOP	RTC	0x008b System Menu Left
+usage GENERICDESKTOP	RTC	0x008c System Menu Up
+usage GENERICDESKTOP	RTC	0x008d System Menu Down
+usage GENERICDESKTOP	OOC	0x0091 D-pad Up
+usage GENERICDESKTOP	OOC	0x0092 D-pad Down
+usage GENERICDESKTOP	OOC	0x0093 D-pad Right
+usage GENERICDESKTOP	OOC	0x0094 D-pad Left
+usage SIMULATION	NONE	0x0000 Undefined
+usage SIMULATION	CA	0x0001 Flight Simulation Device
+usage SIMULATION	CA	0x0002 Automobile Simulation Device
+usage SIMULATION	CA	0x0003 Tank Simulation Device
+usage SIMULATION	CA	0x0004 Spaceship Simulation Device
+usage SIMULATION	CA	0x0005 Submarine Simulation Device
+usage SIMULATION	CA	0x0006 Sailing Simulation Device
+usage SIMULATION	CA	0x0007 Motorcycle Simulation Device
+usage SIMULATION	CA	0x0008 Sports Simulation Device
+usage SIMULATION	CA	0x0009 Airplane Simulation Device
+usage SIMULATION	CA	0x000a Helicopter Simulation Device
+usage SIMULATION	CA	0x000b Magic Carpet Simulation Device
+usage SIMULATION	CA	0x000c Bicycle Simulation Device
+usage SIMULATION	CA	0x0020 Flight Control Stick
+usage SIMULATION	CA	0x0021 Flight Stick
+usage SIMULATION	CP	0x0022 Cyclic Control
+usage SIMULATION	CP	0x0023 Cyclic Trim
+usage SIMULATION	CA	0x0024 Flight Yoke
+usage SIMULATION	CP	0x0025 Track Control
+usage SIMULATION	DV	0x00b0 Aileron
+usage SIMULATION	DV	0x00b1 Aileron Trim
+usage SIMULATION	DV	0x00b2 Anti-Torque Control
+usage SIMULATION	OOC	0x00b3 Autopilot Enable
+usage SIMULATION	OSC	0x00b4 Chaff Release
+usage SIMULATION	DV	0x00b5 Collective Control
+usage SIMULATION	DV	0x00b6 Dive Brake
+usage SIMULATION	OOC	0x00b7 Electronic Countermeasures
+usage SIMULATION	DV	0x00b8 Elevator
+usage SIMULATION	DV	0x00b9 Elevator Trim
+usage SIMULATION	DV	0x00ba Rudder
+usage SIMULATION	DV	0x00bb Throttle
+usage SIMULATION	OOC	0x00bc Flight Communications
+usage SIMULATION	OSC	0x00bd Flare Release
+usage SIMULATION	OOC	0x00be Landing Gear
+usage SIMULATION	DV	0x00bf Toe Brake
+usage SIMULATION	MC	0x00c0 Trigger
+usage SIMULATION	OOC	0x00c1 Weapons Arm
+usage SIMULATION	OSC	0x00c2 Weapons Select
+usage SIMULATION	DV	0x00c3 Wing Flaps
+usage SIMULATION	DV	0x00c4 Accelerator
+usage SIMULATION	DV	0x00c5 Brake
+usage SIMULATION	DV	0x00c6 Clutch
+usage SIMULATION	DV	0x00c7 Shifter
+usage SIMULATION	DV	0x00c8 Steering
+usage SIMULATION	DV	0x00c9 Turret Direction
+usage SIMULATION	DV	0x00ca Barrel Elevation
+usage SIMULATION	DV	0x00cb Dive Plane
+usage SIMULATION	DV	0x00cc Ballast
+usage SIMULATION	DV	0x00cd Bicycle Crank
+usage SIMULATION	DV	0x00ce Handle Bars
+usage SIMULATION	DV	0x00cf Front Brake
+usage SIMULATION	DV	0x00d0 Rear Brake
+usage VR		NONE	0x0000 Undefined
+usage VR		CA	0x0001 Belt
+usage VR		CA	0x0002 Body Suit
+usage VR		CP	0x0003 Flexor
+usage VR		CA	0x0004 Glove
+usage VR		CP	0x0005 Head Tracker
+usage VR		CA	0x0006 Head Mounted Display
+usage VR		CA	0x0007 Hand Tracker
+usage VR		CA	0x0008 Oculometer
+usage VR		CA	0x0009 Vest
+usage VR		CA	0x000a Animatronic Device
+usage VR		OOC	0x0020 Stereo Enable
+usage VR		OOC	0x0021 Display Enable
+usage SPORTS		CA	0x0001 Baseball Bat 
+usage SPORTS		CA	0x0002 Golf Club 
+usage SPORTS		CA	0x0003 Rowing Machine 
+usage SPORTS		CA	0x0004 Treadmill 
+usage SPORTS		DV	0x0030 Oar 
+usage SPORTS		DV	0x0031 Slope 
+usage SPORTS		DV	0x0032 Rate 
+usage SPORTS		DV	0x0033 Stick Speed 
+usage SPORTS		DV	0x0034 Stick Face Angle 
+usage SPORTS		DV	0x0035 Stick Heel/Toe 
+usage SPORTS		DV	0x0036 Stick Follow Through 
+usage SPORTS		DV	0x0037 Stick Tempo 
+usage SPORTS		NAry	0x0038 Stick Type 
+usage SPORTS		DV	0x0039 Stick Height 
+usage SPORTS		Sel	0x0050 Putter 
+usage SPORTS		Sel	0x0051 1 Iron 
+usage SPORTS		Sel	0x0052 2 Iron 
+usage SPORTS		Sel	0x0053 3 Iron 
+usage SPORTS		Sel	0x0054 4 Iron 
+usage SPORTS		Sel	0x0055 5 Iron 
+usage SPORTS		Sel	0x0056 6 Iron 
+usage SPORTS		Sel	0x0057 7 Iron 
+usage SPORTS		Sel	0x0058 8 Iron 
+usage SPORTS		Sel	0x0059 9 Iron 
+usage SPORTS		Sel	0x005a 10 Iron 
+usage SPORTS		Sel	0x005b 11 Iron 
+usage SPORTS		Sel	0x005c Sand Wedge 
+usage SPORTS		Sel	0x005d Loft Wedge 
+usage SPORTS		Sel	0x005e Power Wedge 
+usage SPORTS		Sel	0x005f 1 Wood 
+usage SPORTS		Sel	0x0060 3 Wood 
+usage SPORTS		Sel	0x0061 5 Wood 
+usage SPORTS		Sel	0x0062 7 Wood 
+usage SPORTS		Sel	0x0063 9 Wood 
+usage GAME		CA	0x0001 3D Game Controller 
+usage GAME		CA	0x0002 Pinball Device 
+usage GAME		CA	0x0003 Gun Device 
+usage GAME		CP	0x0020 Point of View 
+usage GAME		DV	0x0021 Turn Right/Left 
+usage GAME		DV	0x0022 Pitch Right/Left 
+usage GAME		DV	0x0023 Roll Forward/Backward 
+usage GAME		DV	0x0024 Move Right/Left 
+usage GAME		DV	0x0025 Move Forward/Backward 
+usage GAME		DV	0x0026 Move Up/Down 
+usage GAME		DV	0x0027 Lean Right/Left 
+usage GAME		DV	0x0028 Lean Forward/Backward 
+usage GAME		DV	0x0029 Height of POV 
+usage GAME		MC	0x002a Flipper 
+usage GAME		MC	0x002b Secondary Flipper 
+usage GAME		MC	0x002c Bump 
+usage GAME		OSC	0x002d New Game 
+usage GAME		OSC	0x002e Shoot Ball 
+usage GAME		OSC	0x002f Player 
+usage GAME		OOC	0x0030 Gun Bolt 
+usage GAME		OOC	0x0031 Gun Clip 
+usage GAME		NAry	0x0032 Gun Selector 
+usage GAME		Sel	0x0033 Gun Single Shot 
+usage GAME		Sel	0x0034 Gun Burst 
+usage GAME		Sel	0x0035 Gun Automatic 
+usage GAME		OOC	0x0036 Gun Safety 
+usage GAME		CL	0x0037 Gamepad Fire/Jump 
+usage GAME		CL	0x0039 Gamepad Trigger 
+usage LED		NONE	0x0000 Undefined
+usage LED		OOC	0x0001 Num Lock
+usage LED		OOC	0x0002 Caps Lock
+usage LED		OOC	0x0003 Scroll Lock
+usage LED		OOC	0x0004 Compose
+usage LED		OOC	0x0005 Kana
+usage LED		OOC	0x0006 Power
+usage LED		OOC	0x0007 Shift
+usage LED		OOC	0x0008 Do Not Disturb
+usage LED		OOC	0x0009 Mute
+usage LED		OOC	0x000a Tone Enable
+usage LED		OOC	0x000b High Cut Filter
+usage LED		OOC	0x000c Low Cut Filter
+usage LED		OOC	0x000d Equalizer Enable
+usage LED		OOC	0x000e Sound Field On
+usage LED		OOC	0x000f Surround On
+usage LED		OOC	0x0010 Repeat
+usage LED		OOC	0x0011 Stereo
+usage LED		OOC	0x0012 Sampling Rate Detect
+usage LED		OOC	0x0013 Spinning
+usage LED		OOC	0x0014 CAV
+usage LED		OOC	0x0015 CLV
+usage LED		OOC	0x0016 Recording Format Detect
+usage LED		OOC	0x0017 Off-Hook
+usage LED		OOC	0x0018 Ring
+usage LED		OOC	0x0019 Message Waiting
+usage LED		OOC	0x001a Data Mode
+usage LED		OOC	0x001b Battery Operation
+usage LED		OOC	0x001c Battery OK
+usage LED		OOC	0x001d Battery Low
+usage LED		OOC	0x001e Speaker
+usage LED		OOC	0x001f Head Set
+usage LED		OOC	0x0020 Hold
+usage LED		OOC	0x0021 Microphone
+usage LED		OOC	0x0022 Coverage
+usage LED		OOC	0x0023 Night Mode
+usage LED		OOC	0x0024 Send Calls
+usage LED		OOC	0x0025 Call Pickup
+usage LED		OOC	0x0026 Conference
+usage LED		OOC	0x0027 Stand-by
+usage LED		OOC	0x0028 Camera On
+usage LED		OOC	0x0029 Camera Off
+usage LED		OOC	0x002a On-Line
+usage LED		OOC	0x002b Off-Line
+usage LED		OOC	0x002c Busy
+usage LED		OOC	0x002d Ready
+usage LED		OOC	0x002e Paper-Out
+usage LED		OOC	0x002f Paper-Jam
+usage LED		OOC	0x0030 Remote
+usage LED		OOC	0x0031 Forward
+usage LED		OOC	0x0032 Reverse
+usage LED		OOC	0x0033 Stop
+usage LED		OOC	0x0034 Rewind
+usage LED		OOC	0x0035 Fast Forward
+usage LED		OOC	0x0036 Play
+usage LED		OOC	0x0037 Pause
+usage LED		OOC	0x0038 Record
+usage LED		OOC	0x0039 Error
+usage LED		US	0x003a Usage Selected Indicator
+usage LED		US	0x003b Usage In Use Indicator
+usage LED		UM	0x003c Usage Multi Mode Indicator
+usage LED		Sel	0x003d Indicator On
+usage LED		Sel	0x003e Indicator Flash
+usage LED		Sel	0x003f Indicator Slow Blink
+usage LED		Sel	0x0040 Indicator Fast Blink
+usage LED		Sel	0x0041 Indicator Off
+usage LED		DV	0x0042 Flash On Time
+usage LED		DV	0x0043 Slow Blink On Time
+usage LED		DV	0x0044 Slow Blink Off Time
+usage LED		DV	0x0045 Fast Blink On Time
+usage LED		DV	0x0046 Fast Blink Off Time
+usage LED		UM	0x0047 Usage Indicator Color
+usage LED		Sel	0x0048 Indicator Red
+usage LED		Sel	0x0049 Indicator Green
+usage LED		Sel	0x004a Indicator Amber
+usage LED		OOC	0x004b Generic Indicator
+usage LED		OOC	0x004c System Suspend
+usage LED		OOC	0x004d External Power Connected
+usage TELEPHONY		NONE	0x0000 Undefined
+usage TELEPHONY		CA	0x0001 Phone
+usage TELEPHONY		CA	0x0002 Answering Machine
+usage TELEPHONY		CL	0x0003 Message Controls
+usage TELEPHONY		CL	0x0004 Handset
+usage TELEPHONY		CL	0x0005 Headset
+usage TELEPHONY		NAry	0x0006 Telephony Key Pad
+usage TELEPHONY		NAry	0x0007 Programmable Button
+usage TELEPHONY		OOC	0x0020 Hook Switch
+usage TELEPHONY		MC	0x0021 Flash
+usage TELEPHONY		OSC	0x0022 Feature
+usage TELEPHONY		OOC	0x0023 Hold
+usage TELEPHONY		OSC	0x0024 Redial
+usage TELEPHONY		OSC	0x0025 Transfer
+usage TELEPHONY		OSC	0x0026 Drop
+usage TELEPHONY		OOC	0x0027 Park
+usage TELEPHONY		OOC	0x0028 Forward Calls
+usage TELEPHONY		MC	0x0029 Alternate Function
+usage TELEPHONY		OSC	0x002a Line
+usage TELEPHONY		OOC	0x002b Speaker Phone
+usage TELEPHONY		OOC	0x002c Conference
+usage TELEPHONY		OOC	0x002d Ring Enable
+usage TELEPHONY		OSC	0x002e Ring Select
+usage TELEPHONY		OOC	0x002f Phone Mute
+usage TELEPHONY		MC	0x0030 Caller ID
+usage TELEPHONY		OSC	0x0050 Speed Dial
+usage TELEPHONY		OSC	0x0051 Store Number
+usage TELEPHONY		OSC	0x0052 Recall Number
+usage TELEPHONY		OOC	0x0053 Phone Directory
+usage TELEPHONY		OOC	0x0070 Voice Mail
+usage TELEPHONY		OOC	0x0071 Screen Calls
+usage TELEPHONY		OOC	0x0072 Do Not Disturb
+usage TELEPHONY		OSC	0x0073 Message
+usage TELEPHONY		OOC	0x0074 Answer On/Off
+usage TELEPHONY		MC	0x0090 Inside Dial Tone
+usage TELEPHONY		MC	0x0091 Outside Dial Tone
+usage TELEPHONY		MC	0x0092 Inside Ring Tone
+usage TELEPHONY		MC	0x0093 Outside Ring Tone
+usage TELEPHONY		MC	0x0094 Priority Ring Tone
+usage TELEPHONY		MC	0x0095 Inside Ringback
+usage TELEPHONY		MC	0x0096 Priority Ringback
+usage TELEPHONY		MC	0x0097 Line Busy Tone
+usage TELEPHONY		MC	0x0098 Reorder Tone
+usage TELEPHONY		MC	0x0099 Call Waiting Tone
+usage TELEPHONY		MC	0x009a Confirmation Tone 1
+usage TELEPHONY		MC	0x009b Confirmation Tone 2
+usage TELEPHONY		OOC	0x009c Tones Off
+usage TELEPHONY		MC	0x009d Outside Ringback
+usage TELEPHONY		Sel|OSC	0x00b0 Phone Key 0
+usage TELEPHONY		Sel|OSC	0x00b1 Phone Key 1
+usage TELEPHONY		Sel|OSC	0x00b2 Phone Key 2
+usage TELEPHONY		Sel|OSC	0x00b3 Phone Key 3
+usage TELEPHONY		Sel|OSC	0x00b4 Phone Key 4
+usage TELEPHONY		Sel|OSC	0x00b5 Phone Key 5
+usage TELEPHONY		Sel|OSC	0x00b6 Phone Key 6
+usage TELEPHONY		Sel|OSC	0x00b7 Phone Key 7
+usage TELEPHONY		Sel|OSC	0x00b8 Phone Key 8
+usage TELEPHONY		Sel|OSC	0x00b9 Phone Key 9
+usage TELEPHONY		Sel|OSC	0x00ba Phone Key Star
+usage TELEPHONY		Sel|OSC	0x00bb Phone Key Pound
+usage TELEPHONY		Sel|OSC	0x00bc Phone Key A
+usage TELEPHONY		Sel|OSC	0x00bd Phone Key B
+usage TELEPHONY		Sel|OSC	0x00be Phone Key C
+usage TELEPHONY		Sel|OSC	0x00bf Phone Key D
+usage CONSUMER		NONE	0x0000 Undefined
+usage CONSUMER		CA	0x0001 Consumer Control
+usage CONSUMER		NAry	0x0002 Numeric Key Pad
+usage CONSUMER		NAry	0x0003 Programmable Buttons
+usage CONSUMER		OSC	0x0020 +10
+usage CONSUMER		OSC	0x0021 +100
+usage CONSUMER		OSC	0x0022 AM/PM
+usage CONSUMER		OOC	0x0030 Power
+usage CONSUMER		OSC	0x0031 Reset
+usage CONSUMER		OSC	0x0032 Sleep
+usage CONSUMER		OSC	0x0033 Sleep After
+usage CONSUMER		RTC	0x0034 Sleep Mode
+usage CONSUMER		OOC	0x0035 Illumination
+usage CONSUMER		NAry	0x0036 Function Buttons
+usage CONSUMER		OOC	0x0040 Menu
+usage CONSUMER		OSC	0x0041 Menu Pick
+usage CONSUMER		OSC	0x0042 Menu Up
+usage CONSUMER		OSC	0x0043 Menu Down
+usage CONSUMER		OSC	0x0044 Menu Left
+usage CONSUMER		OSC	0x0045 Menu Right
+usage CONSUMER		OSC	0x0046 Menu Escape
+usage CONSUMER		OSC	0x0047 Menu Value Increase
+usage CONSUMER		OSC	0x0048 Menu Value Decrease
+usage CONSUMER		OOC	0x0060 Data On Screen
+usage CONSUMER		OOC	0x0061 Closed Caption
+usage CONSUMER		OSC	0x0062 Closed Caption Select
+usage CONSUMER		OOC	0x0063 VCR/TV
+usage CONSUMER		OSC	0x0064 Broadcast Mode
+usage CONSUMER		OSC	0x0065 Snapshot
+usage CONSUMER		OSC	0x0066 Still
+usage CONSUMER		NAry	0x0080 Selection
+usage CONSUMER		OSC	0x0081 Assign Selection
+usage CONSUMER		OSC	0x0082 Mode Step
+usage CONSUMER		OSC	0x0083 Recall Last
+usage CONSUMER		OSC	0x0084 Enter Channel
+usage CONSUMER		OSC	0x0085 Order Movie
+usage CONSUMER		LC	0x0086 Channel
+usage CONSUMER		NAry	0x0087 Media Selection
+usage CONSUMER		Sel	0x0088 Media Select Computer
+usage CONSUMER		Sel	0x0089 Media Select TV
+usage CONSUMER		Sel	0x008a Media Select WWW
+usage CONSUMER		Sel	0x008b Media Select DVD
+usage CONSUMER		Sel	0x008c Media Select Telephone
+usage CONSUMER		Sel	0x008d Media Select Program Guide
+usage CONSUMER		Sel	0x008e Media Select Video Phone
+usage CONSUMER		Sel	0x008f Media Select Games
+usage CONSUMER		Sel	0x0090 Media Select Messages
+usage CONSUMER		Sel	0x0091 Media Select CD
+usage CONSUMER		Sel	0x0092 Media Select VCR
+usage CONSUMER		Sel	0x0093 Media Select Tuner
+usage CONSUMER		OSC	0x0094 Quit
+usage CONSUMER		OOC	0x0095 Help
+usage CONSUMER		Sel	0x0096 Media Select Tape
+usage CONSUMER		Sel	0x0097 Media Select Cable
+usage CONSUMER		Sel	0x0098 Media Select Satellite
+usage CONSUMER		Sel	0x0099 Media Select Security
+usage CONSUMER		Sel	0x009a Media Select Home
+usage CONSUMER		Sel	0x009b Media Select Call
+usage CONSUMER		OSC	0x009c Channel Increment
+usage CONSUMER		OSC	0x009d Channel Decrement
+usage CONSUMER		Sel	0x009e Media Select SAP
+usage CONSUMER		OSC	0x00a0 VCR Plus
+usage CONSUMER		OSC	0x00a1 Once
+usage CONSUMER		OSC	0x00a2 Daily
+usage CONSUMER		OSC	0x00a3 Weekly
+usage CONSUMER		OSC	0x00a4 Monthly
+usage CONSUMER		OOC	0x00b0 Play
+usage CONSUMER		OOC	0x00b1 Pause
+usage CONSUMER		OOC	0x00b2 Record
+usage CONSUMER		OOC	0x00b3 Fast Forward
+usage CONSUMER		OOC	0x00b4 Rewind
+usage CONSUMER		OSC	0x00b5 Scan Next Track
+usage CONSUMER		OSC	0x00b6 Scan Previous Track
+usage CONSUMER		OSC	0x00b7 Stop
+usage CONSUMER		OSC	0x00b8 Eject
+usage CONSUMER		OOC	0x00b9 Random Play
+usage CONSUMER		NAry	0x00ba Select Disc
+usage CONSUMER		MC	0x00bb Enter Disc
+usage CONSUMER		OSC	0x00bc Repeat
+usage CONSUMER		LC	0x00bd Tracking
+usage CONSUMER		OSC	0x00be Track Normal
+usage CONSUMER		LC	0x00bf Slow Tracking
+usage CONSUMER		RTC	0x00c0 Frame Forward
+usage CONSUMER		RTC	0x00c1 Frame Back
+usage CONSUMER		OSC	0x00c2 Mark
+usage CONSUMER		OSC	0x00c3 Clear Mark
+usage CONSUMER		OOC	0x00c4 Repeat From Mark
+usage CONSUMER		OSC	0x00c5 Return To Mark
+usage CONSUMER		OSC	0x00c6 Search Mark Forward
+usage CONSUMER		OSC	0x00c7 Search Mark Backwards
+usage CONSUMER		OSC	0x00c8 Counter Reset
+usage CONSUMER		OSC	0x00c9 Show Counter
+usage CONSUMER		RTC	0x00ca Tracking Increment
+usage CONSUMER		RTC	0x00cb Tracking Decrement
+usage CONSUMER		OSC	0x00cc Stop/Eject
+usage CONSUMER		OSC	0x00cd Play/Pause
+usage CONSUMER		OSC	0x00ce Play/Skip
+usage CONSUMER		LC	0x00e0 Volume
+usage CONSUMER		LC	0x00e1 Balance
+usage CONSUMER		OOC	0x00e2 Mute
+usage CONSUMER		LC	0x00e3 Bass
+usage CONSUMER		LC	0x00e4 Treble
+usage CONSUMER		OOC	0x00e5 Bass Boost
+usage CONSUMER		OSC	0x00e6 Surround Mode
+usage CONSUMER		OOC	0x00e7 Loudness
+usage CONSUMER		OOC	0x00e8 MPX
+usage CONSUMER		RTC	0x00e9 Volume Increment
+usage CONSUMER		RTC	0x00ea Volume Decrement
+usage CONSUMER		OSC	0x00f0 Speed Select
+usage CONSUMER		NAry	0x00f1 Playback Speed
+usage CONSUMER		Sel	0x00f2 Standard Play
+usage CONSUMER		Sel	0x00f3 Long Play
+usage CONSUMER		Sel	0x00f4 Extended Play
+usage CONSUMER		OSC	0x00f5 Slow
+usage CONSUMER		OOC	0x0100 Fan Enable
+usage CONSUMER		LC	0x0101 Fan Speed
+usage CONSUMER		OOC	0x0102 Light Enable
+usage CONSUMER		LC	0x0103 Light Illumination Level
+usage CONSUMER		OOC	0x0104 Climate Control Enable
+usage CONSUMER		LC	0x0105 Room Temperature
+usage CONSUMER		OOC	0x0106 Security Enable
+usage CONSUMER		OSC	0x0107 Fire Alarm
+usage CONSUMER		OSC	0x0108 Police Alarm
+usage CONSUMER		RTC	0x0150 Balance Right
+usage CONSUMER		RTC	0x0151 Balance Left
+usage CONSUMER		RTC	0x0152 Bass Increment
+usage CONSUMER		RTC	0x0153 Bass Decrement
+usage CONSUMER		RTC	0x0154 Treble Increment
+usage CONSUMER		RTC	0x0155 Treble Decrement
+usage CONSUMER		CL	0x0160 Speaker System
+usage CONSUMER		CL	0x0161 Channel Left
+usage CONSUMER		CL	0x0162 Channel Right
+usage CONSUMER		CL	0x0163 Channel Center
+usage CONSUMER		CL	0x0164 Channel Front
+usage CONSUMER		CL	0x0165 Channel Center Front
+usage CONSUMER		CL	0x0166 Channel Side
+usage CONSUMER		CL	0x0167 Channel Surround
+usage CONSUMER		CL	0x0168 Channel Low Frequency Enhancement
+usage CONSUMER		CL	0x0169 Channel Top
+usage CONSUMER		CL	0x016a Channel Unknown
+usage CONSUMER		LC	0x0170 Sub-channel
+usage CONSUMER		OSC	0x0171 Sub-channel Increment
+usage CONSUMER		OSC	0x0172 Sub-channel Decrement
+usage CONSUMER		OSC	0x0173 Alternate Audio Increment
+usage CONSUMER		OSC	0x0174 Alternate Audio Decrement
+usage CONSUMER		NAry	0x0180 Application Launch Buttons
+usage CONSUMER		Sel	0x0181 AL Launch Button Configuration Tool
+usage CONSUMER		Sel	0x0182 AL Programmable Button Configuration
+usage CONSUMER		Sel	0x0183 AL Consumer Control Configuration
+usage CONSUMER		Sel	0x0184 AL Word Processor
+usage CONSUMER		Sel	0x0185 AL Text Editor
+usage CONSUMER		Sel	0x0186 AL Spreadsheet
+usage CONSUMER		Sel	0x0187 AL Graphics Editor
+usage CONSUMER		Sel	0x0188 AL Presentation App
+usage CONSUMER		Sel	0x0189 AL Database App
+usage CONSUMER		Sel	0x018a AL Email Reader
+usage CONSUMER		Sel	0x018b AL Newsreader
+usage CONSUMER		Sel	0x018c AL Voicemail
+usage CONSUMER		Sel	0x018d AL Contacts/Address Book
+usage CONSUMER		Sel	0x018e AL Calendar/Schedule
+usage CONSUMER		Sel	0x018f AL Task/Project Manager
+usage CONSUMER		Sel	0x0190 AL Log/Journal/Timecard
+usage CONSUMER		Sel	0x0191 AL Checkbook/Finance
+usage CONSUMER		Sel	0x0192 AL Calculator
+usage CONSUMER		Sel	0x0193 AL A/V Capture/Playback
+usage CONSUMER		Sel	0x0194 AL Local Machine Browser
+usage CONSUMER		Sel	0x0195 AL LAN/WAN Browser
+usage CONSUMER		Sel	0x0196 AL Internet Browser
+usage CONSUMER		Sel	0x0197 AL Remote Networking/ISP Connect
+usage CONSUMER		Sel	0x0198 AL Network Conference
+usage CONSUMER		Sel	0x0199 AL Network Chat
+usage CONSUMER		Sel	0x019a AL Telephony/Dialer
+usage CONSUMER		Sel	0x019b AL Logon
+usage CONSUMER		Sel	0x019c AL Logoff
+usage CONSUMER		Sel	0x019d AL Logon/Logoff
+usage CONSUMER		Sel	0x019e AL Terminal Lock/Screensaver
+usage CONSUMER		Sel	0x019f AL Control Panel
+usage CONSUMER		Sel	0x01a0 AL Command Line Processor/Run
+usage CONSUMER		Sel	0x01a1 AL Process/Task Manager
+usage CONSUMER		Sel	0x01a2 AL Select Task/Application
+usage CONSUMER		Sel	0x0143 AL Next Task/Application
+usage CONSUMER		Sel	0x01a4 AL Previous Task/Application
+usage CONSUMER		Sel	0x01a5 AL Preemptive Halt Task/Application
+usage CONSUMER		NAry	0x0200 Generic GUI Application Controls
+usage CONSUMER		Sel	0x0201 AC New
+usage CONSUMER		Sel	0x0202 AC Open
+usage CONSUMER		Sel	0x0203 AC Close
+usage CONSUMER		Sel	0x0204 AC Exit
+usage CONSUMER		Sel	0x0205 AC Maximize
+usage CONSUMER		Sel	0x0206 AC Minimize
+usage CONSUMER		Sel	0x0207 AC Save
+usage CONSUMER		Sel	0x0208 AC Print
+usage CONSUMER		Sel	0x0209 AC Properties
+usage CONSUMER		Sel	0x021a AC Undo
+usage CONSUMER		Sel	0x021b AC Copy
+usage CONSUMER		Sel	0x021c AC Cut
+usage CONSUMER		Sel	0x021d AC Paste
+usage CONSUMER		Sel	0x021e AC Select All
+usage CONSUMER		Sel	0x021f AC Find
+usage CONSUMER		Sel	0x0220 AC Find and Replace
+usage CONSUMER		Sel	0x0221 AC Search
+usage CONSUMER		Sel	0x0222 AC Go To
+usage CONSUMER		Sel	0x0223 AC Home
+usage CONSUMER		Sel	0x0224 AC Back
+usage CONSUMER		Sel	0x0225 AC Forward
+usage CONSUMER		Sel	0x0226 AC Stop
+usage CONSUMER		Sel	0x0227 AC Refresh
+usage CONSUMER		Sel	0x0228 AC Previous Link
+usage CONSUMER		Sel	0x0229 AC Next Link
+usage CONSUMER		Sel	0x022a AC Bookmarks
+usage CONSUMER		Sel	0x022b AC History
+usage CONSUMER		Sel	0x022c AC Subscriptions
+usage CONSUMER		Sel	0x022d AC Zoom In
+usage CONSUMER		Sel	0x022e AC Zoom Out
+usage CONSUMER		Sel	0x022f AC Zoom
+usage CONSUMER		Sel	0x0230 AC Full Screen View
+usage CONSUMER		Sel	0x0231 AC Normal View
+usage CONSUMER		Sel	0x0232 AC View Toggle
+usage CONSUMER		Sel	0x0233 AC Scroll Up
+usage CONSUMER		Sel	0x0234 AC Scroll Down
+usage CONSUMER		Sel	0x0235 AC Scroll
+usage CONSUMER		Sel	0x0236 AC Pan Left
+usage CONSUMER		Sel	0x0237 AC Pan Right
+usage CONSUMER		Sel	0x0238 AC Pan
+usage CONSUMER		Sel	0x0239 AC New Window
+usage CONSUMER		Sel	0x023a AC Tile Horizontally
+usage CONSUMER		Sel	0x023b AC Tile Vertically
+usage CONSUMER		Sel	0x023c AC Format
+usage DIGITIZER		NONE	0x0000 Undefined
+usage DIGITIZER		CA	0x0001 Digitizer
+usage DIGITIZER		CA	0x0002 Pen
+usage DIGITIZER		CA	0x0003 Light Pen
+usage DIGITIZER		CA	0x0004 Touch Screen
+usage DIGITIZER		CA	0x0005 Touch Pad
+usage DIGITIZER		CA	0x0006 White Board
+usage DIGITIZER		CA	0x0007 Coordinate Measuring Machine
+usage DIGITIZER		CA	0x0008 3D Digitizer
+usage DIGITIZER		CA	0x0009 Stereo Plotter
+usage DIGITIZER		CA	0x000a Articulated Arm
+usage DIGITIZER		CA	0x000b Armature
+usage DIGITIZER		CA	0x000c Multiple Point Digitizer
+usage DIGITIZER		CA	0x000d Free Space Wand
+usage DIGITIZER		CL	0x0020 Stylus
+usage DIGITIZER		CL	0x0021 Puck
+usage DIGITIZER		CL	0x0022 Finger
+usage DIGITIZER		DV	0x0030 Tip Pressure
+usage DIGITIZER		DV	0x0031 Barrel Pressure
+usage DIGITIZER		MC	0x0032 In Range
+usage DIGITIZER		MC	0x0033 Touch
+usage DIGITIZER		OSC	0x0034 Untouch
+usage DIGITIZER		OSC	0x0035 Tap
+usage DIGITIZER		DV	0x0036 Quality
+usage DIGITIZER		MC	0x0037 Data Valid
+usage DIGITIZER		DV	0x0038 Transducer Index
+usage DIGITIZER		CL	0x0039 Tablet Function Keys
+usage DIGITIZER		CL	0x003a Program Change Keys
+usage DIGITIZER		DV	0x003b Battery Strength
+usage DIGITIZER		MC	0x003c Invert
+usage DIGITIZER		DV	0x003d X Tilt
+usage DIGITIZER		DV	0x003e Y Tilt
+usage DIGITIZER		DV	0x003f Azimuth
+usage DIGITIZER		DV	0x0040 Altitude
+usage DIGITIZER		DV	0x0041 Twist
+usage DIGITIZER		MC	0x0042 Tip Switch
+usage DIGITIZER		MC	0x0043 Secondary Tip Switch
+usage DIGITIZER		MC	0x0044 Barrel Switch
+usage DIGITIZER		MC	0x0045 Eraser
+usage DIGITIZER		MC	0x0046 Tablet Pick
+usage PID		NONE	0x0000 Undefined
+usage PID		CA	0x0001 Physical Interface Device
+usage PID		DV	0x0020 Normal
+usage PID		CL	0x0021 Set Effect Report
+usage PID		DV	0x0022 Effect Block Index
+usage PID		DV	0x0023 Parameter Block Offset
+usage PID		DF	0x0024 ROM Flag
+usage PID		NAry	0x0025 Effect Type
+usage PID		Sel	0x0026 ET Constant Force
+usage PID		Sel	0x0027 ET Ramp
+usage PID		Sel	0x0028 ET Custom Force Data
+usage PID		Sel	0x0030 ET Square
+usage PID		Sel	0x0031 ET Sine
+usage PID		Sel	0x0032 ET Triangle
+usage PID		Sel	0x0033 ET Sawtooth Up
+usage PID		Sel	0x0034 ET Sawtooth Down
+usage PID		Sel	0x0040 ET Spring
+usage PID		Sel	0x0041 ET Damper
+usage PID		Sel	0x0042 ET Inertia
+usage PID		Sel	0x0043 ET Friction
+usage PID		DV	0x0050 Duration
+usage PID		DV	0x0051 Sample Period
+usage PID		DV	0x0052 Gain
+usage PID		DV	0x0053 Trigger Button
+usage PID		DV	0x0054 Trigger Repeat Interval
+usage PID		US	0x0055 Axes Enable
+usage PID		DF	0x0056 Direction Enable
+usage PID		CL	0x0057 Direction
+usage PID		CL	0x0058 Type Specific Block Offset
+usage PID		NAry	0x0059 Block Type
+usage PID		CL	0x005a Set Envelope Report
+usage PID		DV	0x005b Attack Level
+usage PID		DV	0x005c Attack Time
+usage PID		DV	0x005d Fade Level
+usage PID		DV	0x005e Fade Time
+usage PID		CL	0x005f Set Condition Report
+usage PID		DV	0x0060 CP Offset
+usage PID		DV	0x0061 Positive Coefficient
+usage PID		DV	0x0062 Negative Coefficient
+usage PID		DV	0x0063 Positive Saturation
+usage PID		DV	0x0064 Negative Saturation
+usage PID		DV	0x0065 Dead Band
+usage PID		CL	0x0066 Download Force Sample
+usage PID		NONE	0x0067 Isoch Custom Force Enable
+usage PID		DV	0x0068 Custom Force Data Report
+usage PID		DV	0x0069 Custom Force Data
+usage PID		DV	0x006a Custom Force Vendor Defined Data
+usage PID		OOC	0x00a6 Actuator Power
+usage PID		CL	0x006b Set Custom Force Report
+usage PID		DV	0x006c Custom Force Data Offset
+usage PID		DV	0x006d Sample Count
+usage PID		CL	0x006e Set Periodic Report
+usage PID		DV	0x006f Offset
+usage PID		DV	0x0070 Magnitude
+usage PID		DV	0x0071 Phase
+usage PID		DV	0x0072 Period
+usage PID		CL	0x0073 Set Constant Force Report
+usage PID		CL	0x0074 Set Ramp Force Report
+usage PID		DV	0x0075 Ramp Start
+usage PID		DV	0x0076 Ramp End
+usage PID		CL	0x0077 Effect Operation Report
+usage PID		NAry	0x0078 Effect Operation
+usage PID		Sel	0x0079 Op Effect Start
+usage PID		Sel	0x007a Op Effect Start Solo
+usage PID		Sel	0x007b Op Effect Stop
+usage PID		DV	0x007c Loop Count
+usage PID		CL	0x007d Device Gain Report
+usage PID		DV	0x007e Device Gain
+usage PID		CL	0x007f PID Pool Report
+usage PID		DV	0x0080 RAM Pool Size
+usage PID		SV	0x0081 ROM Pool Size
+usage PID		SV	0x0082 ROM Effect Block Count
+usage PID		SV	0x0083 Simultaneous Effects Max
+usage PID		SV	0x0084 Pool Alignment
+usage PID		CL	0x0085 PID Pool Move Report
+usage PID		DV	0x0086 Move Source
+usage PID		DV	0x0087 Move Destination
+usage PID		DV	0x0088 Move Length
+usage PID		CL	0x0089 PID Block Load Report
+usage PID		NAry	0x008b Block Load Status
+usage PID		Sel	0x008c Block Load Success
+usage PID		Sel	0x008d Block Load Full
+usage PID		Sel	0x008e Block Load Error
+usage PID		DV	0x008f Block Handle
+usage PID		CL	0x0090 PID Block Free Report
+usage PID		CL	0x0091 Type Specific Block Handle
+usage PID		CL	0x0092 PID State Report
+usage PID		NAry	0x0093 PID Effect State ?
+usage PID		DF	0x0094 Effect Playing
+usage PID		CL	0x0095 PID Device Control Report
+usage PID		NAry	0x0096 PID Device Control
+usage PID		Sel	0x0097 DC Enable Actuators
+usage PID		Sel	0x0098 DC Disable Actuators
+usage PID		Sel	0x0099 DC Stop All Effects
+usage PID		Sel	0x009a DC Device Reset
+usage PID		Sel	0x009b DC Device Pause
+usage PID		Sel	0x009c DC Device Continue
+usage PID		DF	0x009f Device Paused
+usage PID		DF	0x00a0 Actuators Enabled
+usage PID		DF	0x00a4 Safety Switch
+usage PID		DF	0x00a5 Actuator Override Switch
+usage PID		OOC	0x00a6 Actuator Power
+usage PID		DV	0x00a7 Start Delay
+usage PID		CL	0x00a8 Parameter Block Size
+usage PID		SF	0x00a9 Device Managed Pool
+usage PID		SF	0x00aa Shared Parameter Blocks
+usage PID		CL	0x00ab Create New Effect Report
+usage PID		DV	0x00ac RAM Pool Available
+usage ALPHANUMERIC	NONE	0x0000 Undefined
+usage ALPHANUMERIC	CA	0x0001 Alphanumeric Display
+usage ALPHANUMERIC	CL	0x0020 Display Attributes Report
+usage ALPHANUMERIC	SF	0x0021 ASCII Character Set
+usage ALPHANUMERIC	SF	0x0022 Data Read Back
+usage ALPHANUMERIC	SF	0x0023 Font Read Back
+usage ALPHANUMERIC	CL	0x0024 Display Control Report
+usage ALPHANUMERIC	DF	0x0025 Clear Display
+usage ALPHANUMERIC	DF	0x0026 Display Enable
+usage ALPHANUMERIC	SV|DV	0x0027 Screen Saver Delay
+usage ALPHANUMERIC	DF	0x0028 Screen Saver Enable
+usage ALPHANUMERIC	SF|DF	0x0029 Vertical Scroll
+usage ALPHANUMERIC	SF|DF	0x002a Horizontal Scroll
+usage ALPHANUMERIC	CL	0x002b Character Report
+usage ALPHANUMERIC	DV	0x002c Display Data
+usage ALPHANUMERIC	CL	0x002d Display Status
+usage ALPHANUMERIC	Sel	0x002e Stat Not Ready
+usage ALPHANUMERIC	Sel	0x002f Stat Ready
+usage ALPHANUMERIC	Sel	0x0030 Err Not a loadable character
+usage ALPHANUMERIC	Sel	0x0031 Err Font data cannot be read
+usage ALPHANUMERIC	CL	0x0032 Cursor Position Report
+usage ALPHANUMERIC	DV	0x0033 Row
+usage ALPHANUMERIC	DV	0x0034 Column
+usage ALPHANUMERIC	SV	0x0035 Rows
+usage ALPHANUMERIC	SV	0x0036 Columns
+usage ALPHANUMERIC	SF	0x0037 Cursor Pixel Positioning
+usage ALPHANUMERIC	DF	0x0038 Cursor Mode
+usage ALPHANUMERIC	DF	0x0039 Cursor Enable
+usage ALPHANUMERIC	DF	0x003a Cursor Blink
+usage ALPHANUMERIC	CL	0x003b Font Report
+usage ALPHANUMERIC	NONE	0x003c Font Data
+usage ALPHANUMERIC	SV	0x003d Character Width
+usage ALPHANUMERIC	SV	0x003e Character Height
+usage ALPHANUMERIC	SV	0x003f Character Spacing Horizontal
+usage ALPHANUMERIC	SV	0x0040 Character Spacing Vertical
+usage ALPHANUMERIC	SF	0x0041 Unicode Character Set
+usage BARCODE		NONE	0x0000 Undefined
+usage BARCODE		CA	0x0001 Bar Code Badge Reader
